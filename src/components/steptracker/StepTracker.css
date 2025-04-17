@@ -1,0 +1,14 @@
+/* This css is used to override default classes of antd steps component, because we want to adapt colors */
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon{
+    background-color: var(--green) !important;
+    border-color: var(--green) !important;
+}
+
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon >.ant-steps-icon{
+    color: white !important;
+}
+
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+    background-color: var(--fiskaltrust) !important;
+    border-color: var(--fiskaltrust) !important;
+}

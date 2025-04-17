@@ -2,7 +2,7 @@ import React from 'react';
 import { IStepTracker } from './Models/IStepTracker';
 import StepTracker from './StepTracker';
 import './StepTracker.css';
-import { CodeBlock, CopyBlock } from 'react-code-blocks';
+import { CopyBlock } from 'react-code-blocks';
 import { PrimaryButton } from '../buttons/Buttons';
 
 const code = `

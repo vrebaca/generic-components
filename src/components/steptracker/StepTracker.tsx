@@ -1,6 +1,5 @@
 import React from 'react';
 import { Steps } from 'antd';
-// import { useHistory } from 'react-router-dom';
 import { IStepTracker } from './Models/IStepTracker';
 
 type Props = {
@@ -9,7 +8,6 @@ type Props = {
 }
 
 const StepTracker: React.FC<Props> = (props) => {
-    // const history = useHistory();
     const steps = props.stepTracker.Steps.map((step, index) => {
         return {
             title: step.Title,
@@ -20,7 +18,6 @@ const StepTracker: React.FC<Props> = (props) => {
                     if (props.onStepSelected) {
                         props.onStepSelected(index)
                     }
-                    // history.push(step.CurrentUrl);
                 }
             }
         };

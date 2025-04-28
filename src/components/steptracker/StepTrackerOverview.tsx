@@ -95,10 +95,10 @@ const StepTrackerOverview: React.FC = () => {
         <>
             <DFlex>
                 <h4>Step tracker <ComponentBadge /></h4>
-                <p>The step tracker is used in all scenarios where the user needs to complete between 3 and 7 steps. It provides a clear visual indication of the user's current position within the process.
-                    Only completed steps are clickable, allowing the user to navigate back to the configured URL. Additionally, the step tracker supports an optional parameter, onStepSelected, which enables custom actions to be executed when a step is clicked.</p>
-                <p>Step tracker is responsive and will adapt to the screen size.</p>
-                <p>I will add some techical details here for all properties that are configureable.</p>
+                <p>The Step Tracker component is designed for scenarios where users need to complete a sequence of 3 to 7 steps. It provides a clear visual representation of the user's progress within the process. Only completed steps are clickable, allowing users to navigate back to their respective URLs. This ensures a guided and intuitive user experience.</p>
+                <p>The component also supports an optional parameter, <code>onStepSelected</code>, which allows developers to define custom actions when a step is clicked. This adds flexibility for handling specific interactions based on user actions.</p>
+                <p>Additionally, the Step Tracker is fully responsive, adapting seamlessly to different screen sizes to ensure usability across devices.</p>
+                <p>Below, you will find technical details for all configurable properties of the Step Tracker component.</p>
                 <Card title="Step tracker preview" variant="borderless">
                     <StepTracker stepTracker={stepTracker} />
                 </Card>

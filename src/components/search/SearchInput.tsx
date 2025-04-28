@@ -19,7 +19,7 @@ export interface ISearchInputSettings {
     onclearText?: () => void;
     value?: string;
     defaultValue?: string;
-    inputRef?: React.RefObject<HTMLInputElement> | null | undefined;
+    inputRef?: React.RefObject<HTMLInputElement | null> | undefined;
 }
 
 const SearchInput: React.FC<ISearchInputSettings> = (props) => {

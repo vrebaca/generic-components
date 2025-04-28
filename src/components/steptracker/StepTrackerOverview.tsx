@@ -4,7 +4,7 @@ import StepTracker from './StepTracker';
 import './StepTracker.css';
 import { CopyBlock } from 'react-code-blocks';
 import { DFlex } from '../common/Containers';
-import { Table } from 'antd';
+import { Card, Table } from 'antd';
 import { ComponentBadge } from '../common/badges/Badges';
 import PropertyDescription from '../common/antd/tables/PropertyDescription';
 
@@ -41,20 +41,20 @@ const StepTrackerOverview: React.FC = () => {
     const dataSource = [
         {
             key: '1',
-            description: <PropertyDescription 
-            properyName='stepTracker'
-            propertyType='string'
-            isRequired={true}
-            description='Object that contains all StepTracker data configuration.'
+            description: <PropertyDescription
+                properyName='stepTracker'
+                propertyType='string'
+                isRequired={true}
+                description='Object that contains all StepTracker data configuration.'
             />
         },
         {
             key: '2',
-            description: <PropertyDescription 
-            properyName='onStepSelected'
-            propertyType='(step: number) => void'
-            isRequired={true}
-            description='Function that is triggered when it is cliecked on a step. The step number is passed as a parameter.'
+            description: <PropertyDescription
+                properyName='onStepSelected'
+                propertyType='(step: number) => void'
+                isRequired={true}
+                description='Function that is triggered when it is cliecked on a step. The step number is passed as a parameter.'
             />
         }
     ];
@@ -99,11 +99,12 @@ const StepTrackerOverview: React.FC = () => {
                     Only completed steps are clickable, allowing the user to navigate back to the configured URL. Additionally, the step tracker supports an optional parameter, onStepSelected, which enables custom actions to be executed when a step is clicked.</p>
                 <p>Step tracker is responsive and will adapt to the screen size.</p>
                 <p>I will add some techical details here for all properties that are configureable.</p>
-
-                <StepTracker stepTracker={stepTracker} />
+                <Card title="Step tracker preview" variant="borderless">
+                    <StepTracker stepTracker={stepTracker} />
+                </Card>
                 <br />
                 <br />
-                <Table dataSource={dataSource} columns={columns}  pagination={false}/>
+                <Table dataSource={dataSource} columns={columns} pagination={false} />
             </DFlex>
             <DFlex>
                 <CopyBlock

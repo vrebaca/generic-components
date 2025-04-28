@@ -21,6 +21,11 @@ const ComponentsMenu = () => {
           Step tracker
         </a>
       </li>
+      <li>
+        <a href="#/search" className="nav-link text-white">
+          Search
+        </a>
+      </li>
     </ul>
   </div>
   );

@@ -97,8 +97,8 @@ const SearchOverview: React.FC = () => {
         <>
             <DFlex>
                 <h4>Search <ComponentBadge /></h4>
-                <p>The Search component is a reusable React component designed for implementing a search bar with debounced input handling.</p>
-                <p>This component is ideal for scenarios where a responsive and accessible search bar is needed, with support for debounced input and clear functionality. Let me know if you'd like further details or modifications!</p>
+                <p>The Search component is a reusable React component designed to provide a robust and user-friendly search bar. It is built with accessibility and performance in mind, making it suitable for a wide range of applications. The component supports debounced input handling, ensuring that the onChange callback is not triggered excessively during rapid user input, which is particularly useful for optimizing performance in scenarios like API calls or filtering large datasets.
+                </p>
                 <Card title="Search preview" variant="borderless">
                     <Search
                         placeholder='Search...'

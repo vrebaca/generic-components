@@ -110,7 +110,7 @@ export function TanstackTable<T>({
             pagination,
             expanded,
         },
-        getRowCanExpand: (row) => renderDetails ? true : false, // Enable row expansion only if renderDetails is provided
+        getRowCanExpand: () => renderDetails ? true : false, // Enable row expansion only if renderDetails is provided
         onSortingChange: setSorting,
         onColumnFiltersChange: setColumnFilters,
         onColumnVisibilityChange: setColumnVisibility,
@@ -246,7 +246,6 @@ export function TanstackTable<T>({
                                                             onClick={(e) => {e.stopPropagation();}}
                                                             onChange={(e) => {
                                                                 row.toggleSelected(e.currentTarget.checked);
-                                                                const anyItemChecked = table.getIsSomeRowsSelected();
                                                                 onCheckboxClick(row.original, e.currentTarget.checked);
                                                             }} />
                                                     </td>}

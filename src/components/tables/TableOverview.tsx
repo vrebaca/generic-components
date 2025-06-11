@@ -36,14 +36,14 @@ const TanstackTableDemoPage: React.FC = () => {
             accessorKey: "Icons",
             header: () => <CenterContentContainer>{("Icons")}</CenterContentContainer>,
             enableSorting: false,
-            cell: info => <CenterContentContainer><DefaultIcon className="fa fa-address-book-o" fontsize="24px" /></CenterContentContainer>,
+            cell: () => <CenterContentContainer><DefaultIcon className="fa fa-address-book-o" fontsize="24px" /></CenterContentContainer>,
         },
         {
             id: "buttons",
             enableSorting: false,
             header: () => <CenterContentContainer>{("buttons")}</CenterContentContainer>,
             size: 60,
-            cell: ({ row }) => renderButtons(row.original),
+            cell: () => renderButtons(),
         },
         {
             id: "actions",
@@ -138,7 +138,7 @@ const TanstackTableDemoPage: React.FC = () => {
         return result;
     }
 
-    function renderButtons(app: App) {
+    function renderButtons() {
         return (
             <CenterContentContainer>
                 <PrimaryButtonSmall><ButtonIcon className="fa fa-bars"></ButtonIcon></PrimaryButtonSmall>

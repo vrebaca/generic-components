@@ -58,6 +58,6 @@ const BootstrapCheck = styled.input<CheckProps>`
 type CheckInterface = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & CheckProps;
 
 export const Check = forwardRef(
-    (props: CheckInterface, ref) => {
+    (props: CheckInterface) => {
         return (<BootstrapCheck {...props} type="checkbox" checkSize={props.checkSize ?? "normal"} />);
     });

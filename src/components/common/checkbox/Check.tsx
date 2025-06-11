@@ -1,15 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 
 type CheckProps = {
     checkSize?: "normal" | "large" | "xlarge";
+    verticalAlign?: "middle" | "top";
 }
-
-type TriStateCheckProps = {
-    status: TriStateCheckStatus;
-}
-
-export type TriStateCheckStatus = "checked" | "unchecked" | "indeterminate";
 
 const mapSize = (props: CheckProps) => {
     if (props.checkSize === "normal") return "--size: 17px; --radius: .4rem;";
@@ -22,7 +17,7 @@ const BootstrapCheck = styled.input<CheckProps>`
     width: var(--size);
     height: var(--size);
     margin: 0 !important;
-    vertical-align: top;
+    vertical-align: ${(props:CheckProps) => props.verticalAlign === "middle" ? "middle" : "top"};
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: center;
@@ -43,8 +38,7 @@ const BootstrapCheck = styled.input<CheckProps>`
     &:disabled {
         pointer-events: none;
         filter: none;
-        opacity: .3;
-        background-color: lightgray;
+        opacity: .5;
     }
 
     &:focus {
@@ -56,34 +50,14 @@ const BootstrapCheck = styled.input<CheckProps>`
 
     &:checked {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
-        background-color: #30add1;
-        border-color: #30add1;
-    }
-
-    &:indeterminate {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
-        background-color: #30add1;
-        border-color: #30add1;
+        background-color: #00A7CE;
+        border-color: #00A7CE;
     }
 `;
 
 type CheckInterface = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & CheckProps;
-type TriStateCheckInterface = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & CheckProps & TriStateCheckProps;
 
-export const Check = (props: CheckInterface) => {
-    return (<BootstrapCheck {...props} type="checkbox" checkSize={props.checkSize ?? "normal"} />);
-};
-
-export const TriStateCheckbox = (props: TriStateCheckInterface) => {
-    return (<BootstrapCheck
-        {...props}
-        type="checkbox"
-        checkSize={props.checkSize ?? "normal"}
-        ref={(input: HTMLInputElement) => {
-            if (input) {
-                input.indeterminate = props.status === "indeterminate";
-                input.checked = props.status === "checked" ? true : false;
-            }
-        }}
-    />);
-};
+export const Check = forwardRef(
+    (props: CheckInterface, ref) => {
+        return (<BootstrapCheck {...props} type="checkbox" checkSize={props.checkSize ?? "normal"} />);
+    });

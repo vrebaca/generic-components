@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const DFlex = styled.div.attrs({ className: "d-flex flex-column" })`
-    height: 100vh;
+export const Wrapper = styled.div.attrs({ className: "wrapper wrapper-content" })`
+    min-width: calc(100vw - 240px);
     overflowY: auto;
     padding: 20px;`;
 
@@ -40,3 +40,18 @@ max-width: 950px;
 export const BootstrapFlexAlignGap = styled.div.attrs({
   className: "d-flex align-items-center gap-1"
 })``;
+
+
+export const BootstrapRow = styled.div.attrs({ className: "row" })``;
+
+export const ColMd4 = styled.div.attrs({ className: "col-md-4" })``;
+
+type SpacingContainerProps = {
+  Margin?: string;
+  Padding?: string;
+};
+
+export const SpacingContainer = styled.div<SpacingContainerProps>`
+  margin: ${(props: SpacingContainerProps) => props.Margin || "0px"};
+  padding: ${(props: SpacingContainerProps) => props.Padding || "0px"};
+`;

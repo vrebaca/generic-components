@@ -1,0 +1,51 @@
+.page-selector {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.page-selector li {
+    border: 1px solid #ddd;
+}
+.page-selector li .btn {
+    padding: 3px 20px;
+}
+.page-selector li .btn[disabled] {
+    color: inherit;
+}
+
+.page-selector li.page {
+    display: flex;
+    align-items: center;
+    padding: 3px 20px;
+    font-size: 11px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.page-selector li.first-page {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.page-selector li.last-page {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.first-page:hover {
+    border-color: #30add1;
+}
+
+.next-page:hover {
+    border-color: #30add1;
+}
+
+.previous-page:hover {
+    border-color: #30add1;
+}
+
+.last-page:hover {
+    border-color: #30add1;
+}

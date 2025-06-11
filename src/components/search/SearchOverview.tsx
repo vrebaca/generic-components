@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { DFlex } from '../common/Containers';
-import { ComponentBadge } from '../common/badges/Badges';
 import { Card, Table } from 'antd';
 import Search from './Search';
 import { CopyBlock } from 'react-code-blocks';
 import PropertyDescription from '../common/antd/tables/PropertyDescription';
+import { ComponentBadge } from '../common/badges/AntdBadges';
+import { Wrapper } from '../common/Containers';
 
 const dataSource = [
     {
@@ -94,8 +94,8 @@ const SearchOverview: React.FC = () => {
     />`;
 
     return (
-        <>
-            <DFlex>
+        <Wrapper>
+            <div>
                 <h4>Search <ComponentBadge /></h4>
                 <p>The Search component is a reusable React component designed to provide a robust and user-friendly search bar. It is built with accessibility and performance in mind, making it suitable for a wide range of applications. The component supports debounced input handling, ensuring that the onChange callback is not triggered excessively during rapid user input, which is particularly useful for optimizing performance in scenarios like API calls or filtering large datasets.
                 </p>
@@ -117,15 +117,15 @@ const SearchOverview: React.FC = () => {
                 <br />
                 <br />
                 <Table dataSource={dataSource} columns={columns} pagination={false} />
-            </DFlex>
-            <DFlex>
+            </div>
+            <div>
                 <CopyBlock
                     text={code}
                     language={"typescript"}
                     showLineNumbers
                 />
-            </DFlex>
-        </>
+            </div>
+        </Wrapper>
     );
 };
 

@@ -1,0 +1,21 @@
+  .option {
+    cursor: pointer;
+    padding: 15px 30px;
+  }
+
+  .disabled-option {
+    cursor: not-allowed;
+    padding: 15px 30px;
+  }
+  
+  .option:hover {
+    background-color: var(--gray);
+    color: black;
+  }
+
+    .custom-context-menu {
+    position: fixed;
+    z-index: 10;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }

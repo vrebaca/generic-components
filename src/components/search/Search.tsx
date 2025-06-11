@@ -15,26 +15,36 @@ interface ISearchProps {
 
 const Search: React.FC<ISearchProps> = (props) => {
     const debounceTime = props.debounceTime ?? 300;
-    const debouncedEventHandler = useMemo(
-        () => debounce(props.onChange, debounceTime),
-        [props.onChange]
-    );
+const [internalValue, setInternalValue] = React.useState(props.value ?? "");
+const inputRef = useRef<HTMLInputElement>(null);
 
-    const inputRef = useRef<HTMLInputElement>(null);
-    if(inputRef.current) {
-        props.isclear && (inputRef.current.value = "");
-    }
+// Keep internalValue in sync with props.value
+useEffect(() => {
+    setInternalValue(props.value ?? "");
+}, [props.value]);
 
-    useEffect(() => debouncedEventHandler.cancel(), []);
+const debouncedOnChange = useMemo(
+    () => debounce((e: React.ChangeEvent<HTMLInputElement>) => {
+        props.onChange(e);
+    }, debounceTime),
+    [props.onChange]
+);
 
-    return (
-        <SearchInput inputRef={inputRef} ariaLable={props.aria}
-            defaultValue={props.value}
-            placeholder={props.placeholder}         
-            onChange={debouncedEventHandler}
-            onclearText={props.onClearText}>
-        </SearchInput>
-    );
+useEffect(() => debouncedOnChange.cancel(), []);
+
+return (
+    <SearchInput
+        inputRef={inputRef}
+        ariaLable={props.aria}
+        value={internalValue}
+        placeholder={props.placeholder}
+        onChange={e => {
+            setInternalValue(e.target.value);
+            debouncedOnChange(e);
+        }}
+        onclearText={props.onClearText}
+    />
+);
 };
 
 export default Search;

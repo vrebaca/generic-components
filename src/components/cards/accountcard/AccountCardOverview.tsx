@@ -1,10 +1,9 @@
 import React from 'react';
-import { DFlex } from '../../common/Containers';
-import { ComponentBadge } from '../../common/badges/Badges';
 import { Card, Table } from 'antd';
 import { CopyBlock } from 'react-code-blocks';
-import AccountIbox from './AccountIbox';
+import AccountIbox from './AccountCard';
 import PropertyDescription from '../../common/antd/tables/PropertyDescription';
+import { ComponentBadge } from '../../common/badges/AntdBadges';
 
 const AccountCardOverview: React.FC = () => {
 
@@ -52,7 +51,7 @@ const AccountCardOverview: React.FC = () => {
 
     return (
         <>
-            <DFlex>
+            <div>
                 <h4>AccountIbox <ComponentBadge /></h4>
                 <p>Here goes some description for AccountIbox component.</p>
                 <Card title="Step tracker preview" variant="borderless">
@@ -68,14 +67,14 @@ const AccountCardOverview: React.FC = () => {
                 <br />
                 <br />
                 <Table dataSource={dataSource} columns={columns} pagination={false} />
-            </DFlex>
-            <DFlex>
+            </div>
+            <div>
                 <CopyBlock
                     text={code}
                     language={"typescript"}
                     showLineNumbers
                 />
-            </DFlex>
+            </div>
         </>
     );
 };

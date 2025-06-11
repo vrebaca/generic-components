@@ -1,5 +1,10 @@
-import { Badge } from "antd";
+import styled from "styled-components";
 
-export const ComponentBadge = () => <Badge count="Component" color="var(--lightgrey)" />;
-export const RequiredBadge = () => <Badge count="Required" color="var(--red)" />;
-export const TypeBadge = (text: string) => <Badge text={text} color="var(--fiskaltrust)" />;
+export const Badge = styled.span.attrs({
+  className: "badge badge-primary"
+})`
+    padding-top: 7px;
+    height: 24px;
+    margin: 1px;
+    border-radius: 5px;
+`;

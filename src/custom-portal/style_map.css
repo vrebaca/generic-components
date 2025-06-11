@@ -1,0 +1,344 @@
+﻿section.css-map-section {
+    width: auto;
+    margin: auto;
+    /*overflow: hidden;*/
+    margin: 30px 0 0 0;
+}
+
+.notransition,
+.notransition * {
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+}
+
+
+
+.css-map {
+    width: auto;
+    display: table;
+    margin: auto;
+    font-size: 1vw;
+}
+
+.css-map-group-locator {
+    position: relative;
+    height: 5em;
+    width: 10em;
+    display: inline-block;
+}
+
+.css-map-group {
+    position: relative;
+    width: calc(10em + 2 * 1em);
+    height: calc((5.773502691896258em) * 1 + 4 * 1em + 2em * 2);
+    pointer-events: none;
+    display: table-cell;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.login-map {
+    position: absolute;
+    top: 320px;
+    left: 35%;
+}
+    .css-map-group-active,
+    .css-map-group:hover {
+        height: calc((5.773502691896258em) * 1 + 4 * 1em + 2em * 2);
+        pointer-events: all;
+    }
+
+.css-map-group-locator {
+    top: 30px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    pointer-events: all;
+    left: 1em;
+}
+
+
+.css-map-item {
+    display: block;
+    font-size: 10pt;
+    position: absolute;
+    height: 5em;
+    width: 10em;
+    font-size: inherit;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    overflow: visible;
+    will-change: transform;
+}
+
+.css-map-hexagon-lonley {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    margin: auto;
+}
+
+.css-map-item-content-containing-image {
+    width: 60%;
+}
+
+.css-map-hexagon-lonley .css-map-item-content .css-map-item-content-image {
+    width: 100%;
+}
+
+.css-map-group:not(.css-map-separator) {
+    -webkit-animation-name: css-map-bounce;
+    animation-name: css-map-bounce;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.css-map-group-active .css-map-item,
+.css-map-group:hover .css-map-item,
+.css-map-item-main {
+    opacity: 1;
+    visibility: visible;
+}
+
+.css-map-item:not(.css-map-hexagon-lonley):hover .css-map-item-link {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateY(calc(1.547005383792516em / 2)) rotateZ(-30deg) scale(1.1);
+    transform: translateY(calc(1.547005383792516em / 2)) rotateZ(-30deg) scale(1.1);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+
+.css-map-item:not(.css-map-hexagon-lonley):hover .css-map-item-content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+
+.css-map-item-content,
+.css-map-item-link {
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+
+@media (any-hover: none), (any-hover: on-demand) {
+    .css-map-item-link {
+        pointer-events: none;
+    }
+}
+
+.css-map-item.row\(1\) {
+    -webkit-transform: translateX(calc(5em + 1em / 2));
+    transform: translateX(calc(5em + 1em / 2));
+    bottom: calc(5.773502691896258em * 1.5 + 1 * 1em);
+}
+
+.css-map-item.row\(0\) {
+}
+
+.css-map-item.row\(-1\) {
+    -webkit-transform: translateX(calc(5em + 1em / 2));
+    transform: translateX(calc(5em + 1em / 2));
+    top: calc(5.773502691896258em * 1.5 + 1 * 1em);
+}
+
+.css-map-item.col\(2\) {
+    left: calc(10em * 2 + 2 * 1em);
+}
+
+.css-map-item.col\(1\) {
+    left: calc(10em + 1 * 1em);
+}
+
+.css-map-item.col\(0\) {
+}
+
+.css-map-item.col\(-1\) {
+    right: calc(10em + 1 * 1em);
+}
+
+.css-map-item.col\(-2\) {
+    right: calc(10em * 2 + 2 * 1em);
+}
+
+.css-map-item-content {
+    font-size: 1.35em;
+    line-height: 1.35em;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    z-index: 11;
+    color: #000;
+}
+
+.css-map-item-main .css-map-item-content {
+    color: #FFF;
+}
+
+.css-map-item-content-small {
+    font-size: 1em;
+}
+
+.css-map-item-content-bold {
+    font-weight: bold;
+}
+
+.css-map-hexagon .css-map-item-border,
+.css-map-hexagon .css-map-item-border::before,
+.css-map-hexagon .css-map-item-border::after,
+.css-map-hexagon .css-map-item-link,
+.css-map-hexagon .css-map-item-link::before,
+.css-map-hexagon .css-map-item-link::after {
+    width: 5.773502691896258em;
+    height: 10em;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+    .css-map-hexagon .css-map-item-border,
+    .css-map-hexagon .css-map-item-border::before,
+    .css-map-hexagon .css-map-item-border::after {
+        display: none;
+        position: absolute;
+        /* -webkit-box-shadow: inset 0px -0.2em 0px 0px rgba(0, 0, 0, 1), inset 0px 0.2em 0px 0px rgba(0, 0, 0, 1);
+    box-shadow: inset 0px -0.2em 0px 0px rgba(0, 0, 0, 1), inset 0px 0.2em 0px 0px rgba(0, 0, 0, 1); */
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 0;
+        border-top: .2em;
+        border-bottom: .2em;
+        border-style: solid;
+        border-color: black;
+        background: rgba(0, 0, 0, 0);
+        z-index: 11;
+    }
+
+        .css-map-hexagon .css-map-item-border::before,
+        .css-map-hexagon .css-map-item-border::after {
+            top: -.2em;
+        }
+
+.css-map-hexagon.css-map-item-main .css-map-item-border,
+.css-map-hexagon.css-map-item-main .css-map-item-border::before,
+.css-map-hexagon.css-map-item-main .css-map-item-border::after {
+    display: inherit;
+}
+
+.css-map-hexagon .css-map-item-link {
+    -webkit-transform: translateY(calc(1.547005383792516em / 2)) rotateZ(-30deg);
+    transform: translateY(calc(1.547005383792516em / 2)) rotateZ(-30deg);
+}
+
+    .css-map-hexagon .css-map-item-border::before,
+    .css-map-hexagon .css-map-item-link::before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        -webkit-transform: rotateZ(120deg);
+        transform: rotateZ(120deg);
+    }
+
+    .css-map-hexagon .css-map-item-border::after,
+    .css-map-hexagon .css-map-item-link::after {
+        content: "";
+        position: absolute;
+        background: inherit;
+        -webkit-transform: rotateZ(-120deg);
+        transform: rotateZ(-120deg);
+    }
+
+.css-map-separator {
+    width: calc(5.773502691896258em);
+    height: 5em;
+}
+
+    .css-map-separator .css-map-item {
+        width: calc(5.773502691896258em);
+        height: 5em;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+
+    .css-map-separator .css-map-group-locator::before,
+    .css-map-separator .css-map-group-locator::after {
+        content: "";
+        height: 5.773502691896258em;
+        width: calc(2 * 5.773502691896258em / 5);
+        background: #0CA7CE;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    .css-map-separator .css-map-group-locator::after {
+        width: 5.773502691896258em;
+        height: calc(2 * 5.773502691896258em / 5);
+    }
+
+    .css-map-separator .css-map-group-locator .css-map-item {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+.css-map-text {
+    display: block;
+}
+
+    .css-map-text > * {
+        display: none;
+    }
+
+
+@-webkit-keyframes css-map-bounce {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 1200px) {
+    .css-map {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 990px) {
+    .css-map {
+        font-size: 1.25vw;
+    }
+}
+
+
+.css-map.no-click .css-map-item-link {
+    pointer-events: none !important;
+}

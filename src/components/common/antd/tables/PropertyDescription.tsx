@@ -1,5 +1,5 @@
 import React from 'react';
-import { RequiredBadge, TypeBadge } from '../../badges/Badges';
+import { RequiredBadge, TypeBadge } from '../../badges/AntdBadges';
 
 const PropertyDescription: React.FC<{ properyName: string, propertyType: string, isRequired?: boolean, description: string }> = (props) => {
     return (

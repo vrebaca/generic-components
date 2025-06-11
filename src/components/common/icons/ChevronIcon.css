@@ -1,0 +1,9 @@
+.chevron-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* When open, rotate 90 degrees to simulate chevron-down */
+.chevron-icon.open {
+  transform: rotate(90deg);
+}

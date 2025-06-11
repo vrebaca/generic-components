@@ -1,8 +1,9 @@
 import React from 'react';
+import { Wrapper } from '../common/Containers';
 
 const Intro: React.FC = () => {
     return (
-        <div id="intro">
+        <Wrapper>
             <h4>Custom Generic Components</h4>
             <p>
                 Custom generic components are reusable, specific building blocks designed to streamline development and ensure consistency across applications. These components are typically created to align with a design system, coding standards, and business requirements. By encapsulating common functionality and styling, they provide a standardized way to implement features, reducing the need for repetitive code and minimizing errors.
@@ -23,7 +24,7 @@ const Intro: React.FC = () => {
             <p>
                 For now, these components will not be libraries but will remain as part of the project structure for easier integration and development.
             </p>
-        </div>
+        </Wrapper>
     );
 };
 

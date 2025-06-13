@@ -2,11 +2,11 @@ import { ColumnDef } from "@tanstack/react-table";
 import { App, mockApps } from "./Models/App";
 import { CenterContentContainer } from "../common/Containers/BootstrapContainers";
 import { ButtonIcon, DefaultIcon } from "../common/icons/Icons";
-import { CSVColumn, HeaderButton, TanstackDropdownProps, TanstackTable } from "./TanstackTable";
-import { PrimaryButtonSmall } from "../buttons/Buttons";
-import { TextBodyMdRegular } from "../common/textformats/PageHeadings";
+import { CSVColumn, HeaderButton, TanstackDropdownProps, TanstackTable } from "../../packages/tables/tanstacktable/TanstackTable";
 import PopOverModal from "../modal/PopOverModal";
-import { Wrapper } from "../common/Containers";
+import { ContentWrapper, PageWrapper } from "../common/Containers";
+import { TextBodyMdRegular } from "../../packages/typography";
+import { PrimaryButtonSmall } from "../../packages/buttons/Buttons";
 
 const TanstackTableDemoPage: React.FC = () => {
 
@@ -83,27 +83,69 @@ const TanstackTableDemoPage: React.FC = () => {
                 value: "false",
                 label: ("Disabled"),
             },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
+            {
+                value: "false",
+                label: ("Disabled"),
+            },
         ],
     }
 
     return (
-        <Wrapper>
-            <TanstackTable
-                key={tableId}
-                columns={columns}
-                data={mockApps}
-                pagesize={50}
-                tableHeight='calc(100vh - 350px)'
-                headerTitle={("List of your Apps")}
-                csvFileName="apps.csv"
-                csvColumns={getcsvColumns()}
-                renderDetails={renderDetails}
-                onCheckboxClick={onAppClicked}
-                onSelectAll={() => { }}
-                headerButtons={headerButtons}
-                dropdownFilter={dropdownFilter}
-            />
-        </Wrapper>
+        <PageWrapper>
+            <ContentWrapper>
+                <TanstackTable
+                    key={tableId}
+                    columns={columns}
+                    data={mockApps}
+                    pagesize={50}
+                    tableHeight='calc(100vh - 290px)'
+                    headerTitle={("List of your Apps")}
+                    csvFileName="apps.csv"
+                    csvColumns={getcsvColumns()}
+                    renderDetails={renderDetails}
+                    onCheckboxClick={onAppClicked}
+                    onSelectAll={() => { }}
+                    headerButtons={headerButtons}
+                    dropdownFilter={dropdownFilter}
+                />
+            </ContentWrapper>
+        </PageWrapper>
     );
 
 

@@ -4419,14 +4419,6 @@ video {
     overflow-x: hidden;
 }
 
-.wrapper {
-    padding: 0 20px;
-}
-
-.wrapper-content {
-    padding: 20px 10px 40px;
-}
-
 #page-wrapper {
     padding: 0 15px;
     min-height: 100vh !important;

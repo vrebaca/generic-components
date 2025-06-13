@@ -1,0 +1,26 @@
+{
+  "name": "@fiskaltrust/typography",
+  "version": "1.0.1",
+  "description": "Typography components using styled-components for consistent text styles.",
+  "main": "Typography.ts",
+  "types": "Typography.ts",
+  "files": [
+    "Typography.ts",
+    "index.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiskaltrust/generic-components.git"
+  },
+  "author": "fiskaltrust",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": ">=5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

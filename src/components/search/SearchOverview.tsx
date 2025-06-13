@@ -4,7 +4,7 @@ import Search from './Search';
 import { CopyBlock } from 'react-code-blocks';
 import PropertyDescription from '../common/antd/tables/PropertyDescription';
 import { ComponentBadge } from '../common/badges/AntdBadges';
-import { Wrapper } from '../common/Containers';
+import { ContentWrapper, PageWrapper } from '../common/Containers';
 
 const dataSource = [
     {
@@ -94,38 +94,40 @@ const SearchOverview: React.FC = () => {
     />`;
 
     return (
-        <Wrapper>
-            <div>
-                <h4>Search <ComponentBadge /></h4>
-                <p>The Search component is a reusable React component designed to provide a robust and user-friendly search bar. It is built with accessibility and performance in mind, making it suitable for a wide range of applications. The component supports debounced input handling, ensuring that the onChange callback is not triggered excessively during rapid user input, which is particularly useful for optimizing performance in scenarios like API calls or filtering large datasets.
-                </p>
-                <Card title="Search preview" variant="borderless">
-                    <Search
-                        placeholder='Search...'
-                        onChange={(e) => {
-                            setClearFilter(false);
-                            setSearchTerm(e.target.value);
-                        }}
-                        onClearText={() => {
-                            setSearchTerm("");
-                            setClearFilter(true);
-                        }}
-                        value={searchTerm}
-                        isclear={clearFilter}
-                        debounceTime={0} />
-                </Card>
-                <br />
-                <br />
-                <Table dataSource={dataSource} columns={columns} pagination={false} />
-            </div>
-            <div>
-                <CopyBlock
-                    text={code}
-                    language={"typescript"}
-                    showLineNumbers
-                />
-            </div>
-        </Wrapper>
+        <PageWrapper>
+            <ContentWrapper>
+                <div>
+                    <h4>Search <ComponentBadge /></h4>
+                    <p>The Search component is a reusable React component designed to provide a robust and user-friendly search bar. It is built with accessibility and performance in mind, making it suitable for a wide range of applications. The component supports debounced input handling, ensuring that the onChange callback is not triggered excessively during rapid user input, which is particularly useful for optimizing performance in scenarios like API calls or filtering large datasets.
+                    </p>
+                    <Card title="Search preview" variant="borderless">
+                        <Search
+                            placeholder='Search...'
+                            onChange={(e) => {
+                                setClearFilter(false);
+                                setSearchTerm(e.target.value);
+                            }}
+                            onClearText={() => {
+                                setSearchTerm("");
+                                setClearFilter(true);
+                            }}
+                            value={searchTerm}
+                            isclear={clearFilter}
+                            debounceTime={0} />
+                    </Card>
+                    <br />
+                    <br />
+                    <Table dataSource={dataSource} columns={columns} pagination={false} />
+                </div>
+                <div>
+                    <CopyBlock
+                        text={code}
+                        language={"typescript"}
+                        showLineNumbers
+                    />
+                </div>
+            </ContentWrapper>
+        </PageWrapper>
     );
 };
 

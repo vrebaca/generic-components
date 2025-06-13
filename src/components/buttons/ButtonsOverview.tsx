@@ -1,5 +1,5 @@
 import React from 'react';
-import { DangerButton, DangerOutlineButton, PrimaryButton, PrimaryOutlineButton, SecondaryButton, SecondaryOutlineButton } from './Buttons';
+import { DangerButton, DangerOutlineButton, PrimaryButton, PrimaryOutlineButton, SecondaryButton, SecondaryOutlineButton } from '../../packages/buttons/Buttons';
 
 const ButtonsOverview: React.FC = () => {
     return (

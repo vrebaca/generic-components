@@ -10,12 +10,13 @@ import './custom-portal/style.css';
 import './custom-portal/style_extend.css';
 import './custom-portal/style_map.css';
 import './App.css';
-import './colors.css'
-import './fontsizes.css'
-import './lineheights.css'
+import './packages/colors/colors.css'
+import './packages/fonts/fontsizes.css'
+import './packages/fonts/lineheights.css'
 import '@fontsource/open-sans';
 import SearchOverview from './components/search/SearchOverview';
 import TableOverview from './components/tables/TableOverview';
+import ComboBoxOverview from './pages/ComboBoxOverview';
 
 
 function App() {
@@ -27,20 +28,16 @@ function App() {
         </div>
       </div>
       <div id="page-wrapper" className="gray-bg">
-        <div className='wrapper wrapper-content'>
+        <div >
           <div className='row'>
             <HashRouter>
               <Routes>
-                <Route path=''
-                  element={<Intro></Intro>} />
-                <Route path='/steptracker'
-                  element={<StepTrackerOverview />} />
-                <Route path='/search'
-                  element={<SearchOverview />} />
-                <Route path='/accountcard'
-                  element={<AccountCardOverview />} />
-                <Route path='/table'
-                  element={<TableOverview />} />
+                <Route path='' element={<Intro />} />
+                <Route path='/steptracker' element={<StepTrackerOverview />} />
+                <Route path='/search' element={<SearchOverview />} />
+                <Route path='/accountcard' element={<AccountCardOverview />} />
+                <Route path='/table' element={<TableOverview />} />
+                <Route path='/combobox' element={<ComboBoxOverview />} />
               </Routes>
             </HashRouter>
           </div>

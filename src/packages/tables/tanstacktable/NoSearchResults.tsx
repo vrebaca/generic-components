@@ -1,7 +1,6 @@
 import React from 'react';
-import { DefaultIcon } from '../common/icons/Icons';
-import { H4SemiBold } from '../common/textformats/PageHeadings';
-
+import { DefaultIcon } from '../../../components/common/icons/Icons';
+import { H4SemiBold } from '../../typography/Typography';
 
 const NoSearchResults: React.FC<{ searchTerm: string, height: string }> = ({ searchTerm, height }) => {
     return (

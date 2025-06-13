@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { IBox, IBoxContent, IBoxTitle } from '../../common/Containers/BootstrapContainers';
 import { FlexAlignGapContainer } from '../../common/Containers/FlexContainers';
 import { Check } from '../../common/checkbox/Check';
-import { LinkLgSemiBold, TextBodyMdSemiBold } from '../../common/textformats/PageHeadings';
 import { DefaultMdIcon } from '../../common/icons/Icons';
 import CardHeader from '../CardHeader';
+import { LinkLgSemiBold, TextBodyMdSemiBold } from '../../../packages/typography';
 
 
 type Props = {

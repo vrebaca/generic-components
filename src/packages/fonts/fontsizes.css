@@ -1,0 +1,24 @@
+:root {
+    --fontsize-heading-h1: 30px;
+    --fontsize-heading-h2: 24px;
+    --fontsize-heading-h3: 16px;
+    --fontsize-heading-h4: 14px;
+    --fontsize-heading-h5: 12px;
+    --fontsize-heading-h6: 10px;
+    --fontsize-body-sm: 10px;
+    --fontsize-body-md: 13px;
+    --fontsize-body-lg: 16px;
+    --fontsize-body-xl: 18px;
+    --fontsize-body-xxl: 20px;
+    --fontsize-body-xxxl: 22px;
+    --fontsize-link-sm: 10px;
+    --fontsize-link-md: 13px;
+    --fontsize-link-lg: 16px;
+    --fontsize-link-xl: 18px;
+    --fontsize-link-xxl: 20px;
+    --fontsize-link-xxxl: 24px;
+    --fontsize-flexcontainer950: 16px;
+    --fontsize-defaulticon: 13px;
+    --fontsize-mdicon: 16px;
+
+}

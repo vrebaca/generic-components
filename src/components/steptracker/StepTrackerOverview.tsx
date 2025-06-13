@@ -6,7 +6,7 @@ import { CopyBlock } from 'react-code-blocks';
 import { Card, Table } from 'antd';
 import PropertyDescription from '../common/antd/tables/PropertyDescription';
 import { ComponentBadge } from '../common/badges/AntdBadges';
-import { Wrapper } from '../common/Containers';
+import { ContentWrapper, PageWrapper } from '../common/Containers';
 
 const code = `const stepTracker: IStepTracker = {
         CurrentStep: 1,
@@ -92,28 +92,30 @@ const StepTrackerOverview: React.FC = () => {
         }]
     };
     return (
-        <Wrapper>
-            <div>
-                <h4>Step tracker <ComponentBadge /></h4>
-                <p>The Step Tracker component is designed for scenarios where users need to complete a sequence of 3 to 7 steps. It provides a clear visual representation of the user's progress within the process. Only completed steps are clickable, allowing users to navigate back to their respective URLs. This ensures a guided and intuitive user experience.</p>
-                <p>The component also supports an optional parameter, <code>onStepSelected</code>, which allows developers to define custom actions when a step is clicked. This adds flexibility for handling specific interactions based on user actions.</p>
-                <p>Additionally, the Step Tracker is fully responsive, adapting seamlessly to different screen sizes to ensure usability across devices.</p>
-                <p>Below, you will find technical details for all configurable properties of the Step Tracker component.</p>
-                <Card title="Step tracker preview" variant="borderless">
-                    <StepTracker stepTracker={stepTracker} />
-                </Card>
-                <br />
-                <br />
-                <Table dataSource={dataSource} columns={columns} pagination={false} />
-            </div>
-            <div>
-                <CopyBlock
-                    text={code}
-                    language={"typescript"}
-                    showLineNumbers
-                />
-            </div>
-        </Wrapper>
+        <PageWrapper>
+            <ContentWrapper>
+                <div>
+                    <h4>Step tracker <ComponentBadge /></h4>
+                    <p>The Step Tracker component is designed for scenarios where users need to complete a sequence of 3 to 7 steps. It provides a clear visual representation of the user's progress within the process. Only completed steps are clickable, allowing users to navigate back to their respective URLs. This ensures a guided and intuitive user experience.</p>
+                    <p>The component also supports an optional parameter, <code>onStepSelected</code>, which allows developers to define custom actions when a step is clicked. This adds flexibility for handling specific interactions based on user actions.</p>
+                    <p>Additionally, the Step Tracker is fully responsive, adapting seamlessly to different screen sizes to ensure usability across devices.</p>
+                    <p>Below, you will find technical details for all configurable properties of the Step Tracker component.</p>
+                    <Card title="Step tracker preview" variant="borderless">
+                        <StepTracker stepTracker={stepTracker} />
+                    </Card>
+                    <br />
+                    <br />
+                    <Table dataSource={dataSource} columns={columns} pagination={false} />
+                </div>
+                <div>
+                    <CopyBlock
+                        text={code}
+                        language={"typescript"}
+                        showLineNumbers
+                    />
+                </div>
+            </ContentWrapper>
+        </PageWrapper>
     );
 };
 

@@ -1,0 +1,22 @@
+:root {
+    --lineheight-heading-h1: 40px;
+    --lineheight-heading-h2: 36px;
+    --lineheight-heading-h3: 24px;
+    --lineheight-heading-h4: 28px;
+    --lineheight-heading-h5: 24px;
+    --lineheight-heading-h6: 20px;
+    --lineheight-body-sm: 16px;
+    --lineheight-body-md: 20px;
+    --lineheight-body-lg: 24px;
+    --lineheight-body-xl: 28px;
+    --lineheight-body-xxl: 32px;
+    --lineheight-body-xxxl: 36px;
+    --lineheight-link-sm: 16px;
+    --lineheight-link-md: 20px;
+    --lineheight-link-lg: 24px;
+    --lineheight-link-xl: 28px;
+    --lineheight-link-xxl: 32px;
+    --lineheight-link-xxxl: 36px;
+    --lineheight-defaulticon: 13px;
+    --lineheight-mdicon: 16px;
+}

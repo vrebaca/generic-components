@@ -14,6 +14,7 @@ const ComponentsMenu = () => {
           <li><a href="#/steptracker" className="nav-link text-white">Step tracker</a></li>
           <li><a href="#/search" className="nav-link text-white">Search</a></li>
           <li><a href="#/table" className="nav-link text-white">Tanstack table</a></li>
+          <li><a href="#/combobox" className="nav-link text-white">ComboBox</a></li>
         </ul>
       </div>
     </nav>);

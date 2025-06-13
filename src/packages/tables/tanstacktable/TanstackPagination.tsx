@@ -1,5 +1,6 @@
 import React from 'react';
 import './TanstackPagination.css'
+import { useTranslation } from 'react-i18next';
 
 type Props = {
     pagination: {
@@ -16,6 +17,7 @@ type Props = {
 }
 
 const TanstackPagination: React.FC<Props> = ({ pagination, table }) => {
+    const { t } = useTranslation();
     return (
         <ul className="page-selector">
             <li className="first-page">
@@ -24,7 +26,7 @@ const TanstackPagination: React.FC<Props> = ({ pagination, table }) => {
                     className="btn btn-link"
                     onClick={table.firstPage}
                 >
-                    {("First page")}
+                    {t("First page")}
                 </button>
             </li>
             <li className="previous-page">
@@ -58,7 +60,7 @@ const TanstackPagination: React.FC<Props> = ({ pagination, table }) => {
                     className="btn btn-link"
                     onClick={table.lastPage}
                 >
-                    {("Last page")}
+                    {t("Last page")}
                 </button>
             </li>
         </ul>

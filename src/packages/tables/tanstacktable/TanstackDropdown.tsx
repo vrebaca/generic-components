@@ -13,7 +13,6 @@ export function TanstackDropdown<T>({
 }: TanstackDropdownProps<T>) {
     var selectedValue = null;
     if (column?.getFilterValue() !== undefined) {
-        console.log("column.getFilterValue()", column.getFilterValue() as string);
         selectedValue = column.getFilterValue() as string;
     }
     return (

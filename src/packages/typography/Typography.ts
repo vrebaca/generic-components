@@ -479,3 +479,10 @@ export const LinkXxxlSemiBold = styled.a`
     color: var(--fiskaltrust);
     display: inline-flex;
 `;
+
+export const TextButtonMdRegular = styled.span`
+    font-family: var(--fontfamily-main);
+    font-weight: var(--fontweight-regular);
+    font-size: var(--fontsize-body-md);
+    line-height: var(--lineheight-body-md);
+`;

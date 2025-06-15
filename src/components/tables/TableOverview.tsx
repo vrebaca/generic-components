@@ -76,52 +76,28 @@ const TanstackTableDemoPage: React.FC = () => {
         columnName: "Enabled",
         options: [
             {
+                value: "",
+                label: ("All"),
+                count: mockApps.filter(app=> app).length,
+            },
+            {
                 value: "true",
                 label: ("Enabled"),
+                count: mockApps.filter(app => app.Enabled).length,
+                leftIcon: "fa fa-cube",
             },
             {
                 value: "false",
                 label: ("Disabled"),
+                count: mockApps.filter(app => !app.Enabled).length,
+                leftIcon: "fa fa-cube",
             },
             {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
-            },
-            {
-                value: "false",
-                label: ("Disabled"),
+                value: "test",
+                label: ("Some disabled item"),
+                count: mockApps.filter(app => !app.Enabled).length,
+                leftIcon: "fa fa-cube",
+                isDisabled: true,
             },
         ],
     }

@@ -21,10 +21,12 @@
     --darkgray: #404040;
     --icondefault: #676A69;
     --textdefault: #676A69;
+    --neutral-white: #FFFFFF;
     --neutral-100: #F3F3F4;
-    --petrol-100: #E5F6FA;
     --neutral-350: #D9DCDD;
+    --petrol-100: #E5F6FA;
     --charocal-100: #F5F7F8;
     --charocal-200: #CCD2D4;
     --charocal-300: #67777E;
+
 }

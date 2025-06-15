@@ -1,3 +1,41 @@
-select.form-control {
-  border-radius: 0px !important;
+.dropdown {
+  width: 100%;
+}
+
+.menu-item:hover {
+  background-color: var(--fiskaltrust) !important;
+  color: var(--textdefault) !important;
+}
+
+.item-content:hover {
+  background-color: var(--fiskaltrust) !important;
+  color: var(--neutral-white) !important;
+}
+
+.item-content:focus {
+  border: none;
+  outline: none;
+}
+
+.btn-dropdown {
+  text-align: left;
+  border-color: var(--neutral-350);
+  color: var(--textdefault);
+  vertical-align: middle;
+
+  &:hover {
+    border-color: var(--fiskaltrust) !important;
+  }
+}
+
+.caret {
+  margin-top: 8px;
+}
+
+.dropdown-icon {
+  color: var(--fiskaltrust);
+}
+
+.dropdown-icon:hover {
+  color: var(--neutral-white);
 }

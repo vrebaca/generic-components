@@ -9,8 +9,14 @@ const ComboBoxOverview: React.FC = () => {
             <ContentWrapper>
                 <ComboBox
                     options={[
-                        { label: 'All (1)', value: 'all' },
-                        { label: 'Item Name (2)', value: '2' },
+                        { label: 'All', value: 'all', count: 10 },
+                        { label: 'Item Name', value: '2', leftIcon: 'fa fa-cube', count: 12 },
+                        { label: 'Item Name', value: '3', leftIcon: 'fa fa-cube', isDisabled: true, count: 5 },
+                        { label: 'Item Name', value: '4', leftIcon: 'fa fa-cube', rightIcon: 'fa fa-cube' },
+                        { label: 'Item Name', value: '5', count: 10 },
+                        { label: 'Item Name', value: '6', leftIcon: 'fa fa-cube', count: 10 },
+                        { label: 'Item Name', value: '7', leftIcon: 'fa fa-cube', count: 10 },
+                        { label: 'Item Name', value: '8', leftIcon: 'fa fa-cube', count: 10 },
                     ]}
                     selectedValue={selected}
                     onChange={setSelected}

@@ -1,40 +1,80 @@
-import React from 'react';
-import './ComboBox.css';
+import React, { useState } from 'react';
+import './ComboBox.css'
+import { ButtonIcon } from '../../components/common/icons/Icons';
+import { TextButtonMdRegular } from '../typography';
 
-type Option = {
+export type Option = {
   label: string;
   value: string;
-  icon?: React.ReactNode; // Note: Icons are not supported inside <option>
+  count?: number;
+  leftIcon?: string;
+  rightIcon?: string;
+  isDisabled?: boolean;
 };
 
-type GenericSelectProps = {
+export type ComboBoxProps = {
   options: Option[];
   selectedValue: string;
   onChange: (value: string) => void;
   placeholder?: string;
 };
 
-export const ComboBox: React.FC<GenericSelectProps> = ({
+export const ComboBox: React.FC<ComboBoxProps> = ({
   options,
   selectedValue,
   onChange,
   placeholder = 'Select...'
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const selectedOption = options.find(opt => opt.value === selectedValue);
+
   return (
-    <div className="form-group" style={{ width: '100%' }}>
-      <select
-        className="form-control"
-        value={selectedValue}
-        onChange={(e) => onChange(e.target.value)}
-        style={{ maxHeight: '80px', overflowY: options.length > 8 ? 'auto' : 'visible' }}
+    <div className="dropdown">
+      <button
+        className="btn btn-dropdown dropdown-toggle form-control"
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        <option value="" disabled>{placeholder}</option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label} {/* Icons not shown in <option> tags */}
-          </option>
-        ))}
-      </select>
+        {selectedOption?.leftIcon &&<><ButtonIcon className={selectedOption.leftIcon}/> &nbsp;</>}
+        {selectedOption? <TextButtonMdRegular>{selectedOption.label} {selectedOption.count && ` (${selectedOption.count})`}</TextButtonMdRegular> : placeholder}
+        <span className="caret pull-right"></span>
+      </button>
+
+      {isOpen && (
+        <ul
+          className="dropdown-menu"
+          style={{
+            display: 'block',
+            maxHeight: '280px',
+            overflowY: options.length > 8 ? 'auto' : 'visible',
+            width: '100%',
+            borderRadius: 0
+          }}
+        >
+          {options.map((option) => (
+            <li
+              key={option.value}
+              className={`menu-item ${option.isDisabled ? 'disabled' : ''}`}
+              onClick={() => {
+                if (!option.isDisabled) {
+                  onChange(option.value);
+                  setIsOpen(false);
+                }
+              }}
+              style={{ opacity: option.isDisabled ? 0.5 : 1 }}
+            >
+              <a className='item-content' tabIndex={option.isDisabled ? -1 : 0} aria-disabled={option.isDisabled}>
+                {option.leftIcon && <><ButtonIcon className={option.leftIcon}/> &nbsp;</>}
+                <TextButtonMdRegular>{option.label} {option.count && ` (${option.count})`}</TextButtonMdRegular>
+
+                {selectedValue === option.value && <ButtonIcon className='fa fa-check dropdown-icon pull-right' style={{marginTop: "5px"}}/>}
+                {option.rightIcon && <><ButtonIcon className={`pull-right ${option.rightIcon}`}  style={{marginTop: "5px"}}/> &nbsp;</>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

@@ -27,6 +27,7 @@ import CSVExportButtonNew from "../../../components/common/buttons/CSVExportButt
 import { useTranslation } from "react-i18next";
 import { H3SemiBold, H4SemiBold, TextBodyMdRegular } from "../../typography";
 import { PrimaryButtonSmall, PrimaryOutlineButtonSmall } from "../../buttons/Buttons";
+import { Option } from "../../combobox/ComboBox";
 
 
 export interface CSVColumn<T> {
@@ -42,13 +43,8 @@ export interface HeaderButton {
     RightIcon?: string;
 }
 
-export interface DropdownOption {
-    value: any;
-    label: string;
-}
-
 export interface TanstackDropdownProps {
-    options: DropdownOption[];
+    options: Option[];
     columnName: string;
 }
 

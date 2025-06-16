@@ -4,7 +4,7 @@ import Search from '../../packages/search/Search';
 import { CopyBlock } from 'react-code-blocks';
 import PropertyDescription from '../../packages/antd/tables/PropertyDescription';
 import { ComponentBadge } from '../../packages/badges/AntdBadges';
-import { ContentWrapper, PageWrapper } from '../common/Containers';
+import { ContentWrapper, PageWrapper } from '../../packages/containers/Containers';
 
 const dataSource = [
     {

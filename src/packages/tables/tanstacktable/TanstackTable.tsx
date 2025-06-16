@@ -15,13 +15,13 @@ import {
     ExpandedState,
 } from "@tanstack/react-table";
 import { ButtonIcon, DefaultIcon } from "../../icons/Icons";
-import { Clearfix, ColMd3, ColMd9 } from "../../Containers/BootstrapContainers";
+import { Clearfix, ColMd3, ColMd9 } from "../../containers/BootstrapContainers";
 import Search from "../../search/Search";
 import { TanstackDropdown } from "./TanstackDropdown";
 import { Check } from "../../checkbox/Check";
 import NoSearchResults from "./NoSearchResults";
 import ChevronIcon from "../../icons/ChevronIcon";
-import { BootstrapRow, ColMd4, SpacingContainer, TableWrapper } from "../../../components/common/Containers";
+import { BootstrapRow, ColMd4, SpacingContainer, TableWrapper } from "../../containers/Containers";
 import TanstackPagination from "./TanstackPagination";
 import CSVExportButtonNew from "../../buttons/CSVExportButtonNew";
 import { useTranslation } from "react-i18next";

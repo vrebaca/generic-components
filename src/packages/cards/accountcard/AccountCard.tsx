@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { IBox, IBoxContent, IBoxTitle } from '../../Containers/BootstrapContainers';
-import { FlexAlignGapContainer } from '../../Containers/FlexContainers';
+import { IBox, IBoxContent, IBoxTitle } from '../../containers/BootstrapContainers';
+import { FlexAlignGapContainer } from '../../containers/FlexContainers';
 import { Check } from '../../checkbox/Check';
 import { DefaultMdIcon } from '../../icons/Icons';
 import CardHeader from '../CardHeader';

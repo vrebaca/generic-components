@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentWrapper, IBox, IBoxContent, PageWrapper } from '../common/Containers';
+import { ContentWrapper, IBox, IBoxContent, PageWrapper } from '../../packages/containers/Containers';
 import { H2SemiBold, TextBodyMdRegular } from '../../packages/text/Typography';
 
 const Intro: React.FC = () => {

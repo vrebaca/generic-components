@@ -4,7 +4,7 @@ import { CopyBlock } from 'react-code-blocks';
 import { Card, Table } from 'antd';
 import PropertyDescription from '../../packages/antd/tables/PropertyDescription';
 import { ComponentBadge } from '../../packages/badges/AntdBadges';
-import { ContentWrapper, PageWrapper } from '../common/Containers';
+import { ContentWrapper, PageWrapper } from '../../packages/containers/Containers';
 import { IStepTracker } from '../../packages/steptracker/Models/IStepTracker';
 
 const code = `const stepTracker: IStepTracker = {

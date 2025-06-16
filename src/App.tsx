@@ -1,7 +1,7 @@
 import ComponentsMenu from './ComponentsMenu';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import StepTrackerOverview from './components/steptracker/StepTrackerOverview';
-import Intro from './components/intro/Intro';
+import StepTrackerOverview from './pages/steptracker/StepTrackerOverview';
+import Intro from './pages/intro/Intro';
 import AccountCardOverview from './packages/cards/accountcard/AccountCardOverview';
 import './packages/custom-portal/bootstrap.min.css';
 import './packages/custom-portal/custom-icons.css';
@@ -14,9 +14,9 @@ import './packages/colors/colors.css'
 import './packages/fonts/fontsizes.css'
 import './packages/fonts/lineheights.css'
 import '@fontsource/open-sans';
-import SearchOverview from './components/search/SearchOverview';
-import TableOverview from './components/tables/TableOverview';
-import ComboBoxOverview from './pages/ComboBoxOverview';
+import SearchOverview from './pages/search/SearchOverview';
+import TableOverview from './pages/tables/TableOverview';
+import ComboBoxOverview from './pages/combobox/ComboBoxOverview';
 
 
 function App() {

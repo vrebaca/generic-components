@@ -1,6 +1,6 @@
 import React from 'react';
-import { ComboBox } from '../packages/combobox/ComboBox';
-import { ContentWrapper, PageWrapper } from '../packages/containers/Containers';
+import { ComboBox } from '../../packages/combobox/ComboBox';
+import { ContentWrapper, PageWrapper } from '../../packages/containers/Containers';
 
 const ComboBoxOverview: React.FC = () => {
     const [selected, setSelected] = React.useState<string>('all');

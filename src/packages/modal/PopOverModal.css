@@ -7,13 +7,13 @@
     cursor: not-allowed;
     padding: 15px 30px;
   }
-  
+
   .option:hover {
     background-color: var(--gray);
     color: black;
   }
 
-    .custom-context-menu {
+  .custom-context-menu {
     position: fixed;
     z-index: 10;
     background: white;

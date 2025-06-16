@@ -18,7 +18,7 @@
 }
 
 .btn-dropdown {
-  text-align: left;
+  text-align: left !important;
   border-color: var(--neutral-350);
   color: var(--textdefault);
   vertical-align: middle;

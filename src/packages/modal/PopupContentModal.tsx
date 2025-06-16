@@ -6,8 +6,6 @@ interface IPopupProps {
     children?: React.ReactNode;
 }
 
-
-
 const PopupContentModal = ({ onClose, position, children }: IPopupProps) => {
     const modalRef = useRef<HTMLDivElement>(null); 
     useEffect(() => {

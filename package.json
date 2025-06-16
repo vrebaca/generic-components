@@ -1,11 +1,57 @@
 {
-  "name": "generic-components",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@fiskaltrust/generic-components",
+    "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiskaltrust/generic-components.git"
+  },
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
+  "main": "./dist/generic-components.umd.js",
+  "module": "./dist/generic-components.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/generic-components.es.js",
+      "require": "./dist/generic-components.umd.js"
+    },
+    "./colors.css": "./dist/colors.css",
+    "./fontfamilies.css": "./dist/fontfamilies.css",
+    "./fontsizes.css": "./dist/fontsizes.css",
+    "./fontweights.css": "./dist/fontweights.css",
+    "./lineheights.css": "./dist/lineheights.css",
+    "./custom-portal/bootstrap.min.css": "./dist/bootstrap.min.css",
+    "./custom-portal/custom-icons.css": "./dist/custom-icons.css",
+    "./custom-portal/font-awesome.min.css": "./dist/font-awesome.min.css",
+    "./custom-portal/style_color.css": "./dist/style_color.css",
+    "./custom-portal/style_extend.css": "./dist/style_extend.css",
+    "./custom-portal/style_map.css": "./dist/style_map.css",
+    "./custom-portal/style.css": "./dist/style.css",
+    "./PopOverModal.css": "./dist/PopOverModal.css"
+  },
+  "files": [
+    "dist",
+    "src/packages/colors/colors.css",
+    "src/packages/fonts/fontfamilies.css",
+    "src/packages/fonts/fontsizes.css",
+    "src/packages/fonts/fontweights.css",
+    "src/packages/fonts/lineheights.css",
+    "src/packages/custom-portal/bootstrap.min.css",
+    "src/packages/custom-portal/custom-icons.css",
+    "src/packages/custom-portal/font-awesome.min.css",
+    "src/packages/custom-portal/style_color.css",
+    "src/packages/custom-portal/style_extend.css",
+    "src/packages/custom-portal/style_map.css",
+    "src/packages/custom-portal/style.css",
+    "src/packages/modal/PopOverModal.css"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc -p tsconfig.lib.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist"
@@ -20,7 +66,6 @@
     "mobx-react-lite": "^4.1.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
-    "react-code-blocks": "^0.1.6",
     "react-csv": "^2.2.2",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.5.2",
@@ -28,9 +73,15 @@
     "react-router-dom": "^7.5.0",
     "styled-components": "^6.1.17"
   },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-code-blocks": "^0.1.6"
+  },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^24.0.2",
     "@types/react": "^19.0.10",
     "@types/react-csv": "^1.1.10",
     "@types/react-dom": "^19.0.4",
@@ -43,6 +94,8 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.3.1",
-    "vite-plugin-gh-pages": "^1.0.1"
+    "vite-plugin-gh-pages": "^1.0.1",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vite-plugin-static-copy": "^3.0.2"
   }
 }

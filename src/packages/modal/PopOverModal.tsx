@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ActionButton } from '../buttons/ActionButton';
 import PopupContentModal from './PopupContentModal';
+import './PopOverModal.css';
 
 interface IPopOverProps {
     children?: React.ReactNode
@@ -24,7 +25,6 @@ const PopOverModal = ({ children, buttonIcon, disabled, id, showTooltip, disable
             x: useLayerPosition ?  event.nativeEvent.layerX : event.pageX,
             y: useLayerPosition ? event.nativeEvent.layerY : event.pageY,
         });
-        console.log(event.pageX, event.pageY);
         setIsShown(true);
         event.stopPropagation();
     };  

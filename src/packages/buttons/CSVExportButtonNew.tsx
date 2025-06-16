@@ -2,7 +2,11 @@ import { observer } from "mobx-react-lite";
 import React from "react";
 import { CSVLink } from "react-csv";
 import Skeleton from "react-loading-skeleton";
-import { CSVColumn } from "../tables/tanstacktable/TanstackTable";
+
+export interface CSVColumn<T> {
+    header: string;
+    value: (data: T) => string;
+}
 
 interface ICSVExportButtonProps<T> {
     fileName: string;
@@ -16,13 +20,7 @@ interface ICSVExportButtonProps<T> {
 }
 
 function CSVExportButtonNew<T>(props: ICSVExportButtonProps<T>) {
-    // const appInsights = useAppInsightsContext();
-    // const currentMarket = 'de';
     const separator = ',';
-    // const trackCsvDownload = useTrackEvent(appInsights, "csvDownload", {
-    //     fileName: props.fileName,
-    //     currentMarket,
-    // });
     const csvHeader = props.csvColumns.map((x) => x.header);
     const csvData = props.data.map((x) =>
         props.csvColumns.map((e) => e.value(x))

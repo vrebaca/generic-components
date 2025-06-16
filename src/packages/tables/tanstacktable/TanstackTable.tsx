@@ -15,25 +15,20 @@ import {
     ExpandedState,
 } from "@tanstack/react-table";
 import { ButtonIcon, DefaultIcon } from "../../icons/Icons";
-import { Clearfix, ColMd3, ColMd9 } from "../../containers/BootstrapContainers";
+import { BootstrapRow, Clearfix, ColMd3, ColMd4, ColMd9 } from "../../containers/BootstrapContainers";
 import Search from "../../search/Search";
 import { TanstackDropdown } from "./TanstackDropdown";
 import { Check } from "../../checkbox/Check";
 import NoSearchResults from "./NoSearchResults";
 import ChevronIcon from "../../icons/ChevronIcon";
-import { BootstrapRow, ColMd4, SpacingContainer, TableWrapper } from "../../containers/Containers";
+import { TableWrapper } from "../../containers/Containers";
 import TanstackPagination from "./TanstackPagination";
-import CSVExportButtonNew from "../../buttons/CSVExportButtonNew";
+import CSVExportButtonNew, { CSVColumn } from "../../buttons/CSVExportButtonNew";
 import { useTranslation } from "react-i18next";
 import { H3SemiBold, H4SemiBold, TextBodyMdRegular } from "../../text/Typography";
 import { PrimaryButtonSmall, PrimaryOutlineButtonSmall } from "../../buttons/Buttons";
 import { Option } from "../../combobox/ComboBox";
-
-
-export interface CSVColumn<T> {
-    header: string;
-    value: (data: T) => string;
-}
+import { SpacingContainer } from "../../containers/Spacingcontainers";
 
 export interface HeaderButton {
     Text: string;
@@ -43,7 +38,7 @@ export interface HeaderButton {
     RightIcon?: string;
 }
 
-export interface TanstackDropdownProps {
+export interface DropdownProps {
     options: Option[];
     columnName: string;
 }
@@ -57,7 +52,7 @@ interface GenericTableProps<T> {
     disableHoverEffect?: boolean;
     headerButtons?: HeaderButton[];
     headerTitle?: string;
-    dropdownFilter?: TanstackDropdownProps;
+    dropdownFilter?: DropdownProps;
     tableHeight?: string;
     pagesize?: number;
     onRowClick?: (row: Row<T>) => void;
@@ -158,7 +153,7 @@ export function TanstackTable<T>({
                 ))
             }
             <Clearfix />
-            <SpacingContainer Margin="20px 0px 0px 0px" />
+            <SpacingContainer margin="20px 0px 0px 0px" />
             <div className="ft-table-content">
                 <ColMd9>
                     <Search
@@ -285,7 +280,7 @@ export function TanstackTable<T>({
                         </table>
                     </div>}
                 <Clearfix />
-                <SpacingContainer Margin="24px 0px 0px 0px">
+                <SpacingContainer margin="24px 0px 0px 0px">
                     <BootstrapRow>
                         <ColMd4>
                             {csvColumns && <CSVExportButtonNew
@@ -309,7 +304,6 @@ export function TanstackTable<T>({
 
     function toggleSelected(isChecked: boolean) {
         table.getPreFilteredRowModel().rows.forEach((row) => {
-            console.log(row.getIsSelected(), isChecked);
             row.getIsSelected() !== isChecked && row.toggleSelected(isChecked);
         });
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ComboBox.css'
-import { ButtonIcon } from '../../components/common/icons/Icons';
-import { TextButtonMdRegular } from '../typography';
+import { ButtonIcon } from '../icons/Icons';
+import { TextButtonMdRegular } from '../text/Typography';
 
 export type Option = {
   label: string;

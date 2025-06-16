@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Card, Table } from 'antd';
-import Search from './Search';
+import Search from '../../packages/search/Search';
 import { CopyBlock } from 'react-code-blocks';
-import PropertyDescription from '../common/antd/tables/PropertyDescription';
-import { ComponentBadge } from '../common/badges/AntdBadges';
+import PropertyDescription from '../../packages/antd/tables/PropertyDescription';
+import { ComponentBadge } from '../../packages/badges/AntdBadges';
 import { ContentWrapper, PageWrapper } from '../common/Containers';
 
 const dataSource = [

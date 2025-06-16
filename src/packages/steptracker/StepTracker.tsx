@@ -1,5 +1,6 @@
 import React from 'react';
 import { Steps } from 'antd';
+import './StepTracker.css';
 import { IStepTracker } from './Models/IStepTracker';
 
 type Props = {

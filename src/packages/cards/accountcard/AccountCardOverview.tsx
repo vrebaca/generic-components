@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, Table } from 'antd';
 import { CopyBlock } from 'react-code-blocks';
 import AccountIbox from './AccountCard';
-import PropertyDescription from '../../common/antd/tables/PropertyDescription';
-import { ComponentBadge } from '../../common/badges/AntdBadges';
+import PropertyDescription from '../../antd/tables/PropertyDescription';
+import { ComponentBadge } from '../../badges/AntdBadges';
 
 const AccountCardOverview: React.FC = () => {
 

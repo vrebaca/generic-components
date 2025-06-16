@@ -1,9 +1,9 @@
 import React from 'react';
-import { Badge } from '../common/badges/Badges';
-import { IconButton } from '../common/buttons/IconButtons';
-import { DefaultIcon } from '../common/icons/Icons';
-import CopyIconButton from '../common/buttons/CopyIconButton';
-import { H4SemiBold } from '../../packages/typography';
+import { Badge } from '../badges/Badges';
+import { IconButton } from '../buttons/IconButtons';
+import { DefaultIcon } from '../icons/Icons';
+import CopyIconButton from '../buttons/CopyIconButton';
+import { H4SemiBold } from '../text/Typography';
 
 
 type Props = {

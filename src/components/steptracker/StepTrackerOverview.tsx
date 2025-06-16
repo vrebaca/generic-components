@@ -1,12 +1,11 @@
 import React from 'react';
-import { IStepTracker } from './Models/IStepTracker';
-import StepTracker from './StepTracker';
-import './StepTracker.css';
+import StepTracker from '../../packages/steptracker/StepTracker';
 import { CopyBlock } from 'react-code-blocks';
 import { Card, Table } from 'antd';
-import PropertyDescription from '../common/antd/tables/PropertyDescription';
-import { ComponentBadge } from '../common/badges/AntdBadges';
+import PropertyDescription from '../../packages/antd/tables/PropertyDescription';
+import { ComponentBadge } from '../../packages/badges/AntdBadges';
 import { ContentWrapper, PageWrapper } from '../common/Containers';
+import { IStepTracker } from '../../packages/steptracker/Models/IStepTracker';
 
 const code = `const stepTracker: IStepTracker = {
         CurrentStep: 1,

@@ -2,13 +2,13 @@ import ComponentsMenu from './ComponentsMenu';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import StepTrackerOverview from './components/steptracker/StepTrackerOverview';
 import Intro from './components/intro/Intro';
-import AccountCardOverview from './components/cards/accountcard/AccountCardOverview';
-import './custom-portal/bootstrap.min.css';
-import './custom-portal/custom-icons.css';
-import './custom-portal/font-awesome.min.css';
-import './custom-portal/style.css';
-import './custom-portal/style_extend.css';
-import './custom-portal/style_map.css';
+import AccountCardOverview from './packages/cards/accountcard/AccountCardOverview';
+import './packages/custom-portal/bootstrap.min.css';
+import './packages/custom-portal/custom-icons.css';
+import './packages/custom-portal/font-awesome.min.css';
+import './packages/custom-portal/style.css';
+import './packages/custom-portal/style_extend.css';
+import './packages/custom-portal/style_map.css';
 import './App.css';
 import './packages/colors/colors.css'
 import './packages/fonts/fontsizes.css'

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "./SearchForm.css";
-import { DefaultIcon } from "../common/icons/Icons";
+import { DefaultIcon } from "../icons/Icons";
 
 const Searchbar = styled.div`
 margin-bottom:5px;

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { IBox, IBoxContent, IBoxTitle } from '../../common/Containers/BootstrapContainers';
-import { FlexAlignGapContainer } from '../../common/Containers/FlexContainers';
-import { Check } from '../../common/checkbox/Check';
-import { DefaultMdIcon } from '../../common/icons/Icons';
+import { IBox, IBoxContent, IBoxTitle } from '../../Containers/BootstrapContainers';
+import { FlexAlignGapContainer } from '../../Containers/FlexContainers';
+import { Check } from '../../checkbox/Check';
+import { DefaultMdIcon } from '../../icons/Icons';
 import CardHeader from '../CardHeader';
-import { LinkLgSemiBold, TextBodyMdSemiBold } from '../../../packages/typography';
-
+import { LinkLgSemiBold, TextBodyMdSemiBold } from '../../text/Typography';
 
 type Props = {
     Id: string;

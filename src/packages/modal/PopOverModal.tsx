@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ActionButton } from '../common/buttons/ActionButton';
+import { ActionButton } from '../buttons/ActionButton';
 import PopupContentModal from './PopupContentModal';
 
 interface IPopOverProps {

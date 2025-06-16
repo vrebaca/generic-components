@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import React from "react";
 import { CSVLink } from "react-csv";
 import Skeleton from "react-loading-skeleton";
-import { CSVColumn } from "../../../packages/tables/tanstacktable/TanstackTable";
+import { CSVColumn } from "../tables/tanstacktable/TanstackTable";
 
 interface ICSVExportButtonProps<T> {
     fileName: string;

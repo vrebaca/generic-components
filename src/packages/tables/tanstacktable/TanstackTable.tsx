@@ -14,18 +14,18 @@ import {
     Row,
     ExpandedState,
 } from "@tanstack/react-table";
-import { ButtonIcon, DefaultIcon } from "../../../components/common/icons/Icons";
-import { Clearfix, ColMd3, ColMd9 } from "../../../components/common/Containers/BootstrapContainers";
-import Search from "../../../components/search/Search";
+import { ButtonIcon, DefaultIcon } from "../../icons/Icons";
+import { Clearfix, ColMd3, ColMd9 } from "../../Containers/BootstrapContainers";
+import Search from "../../search/Search";
 import { TanstackDropdown } from "./TanstackDropdown";
-import { Check } from "../../../components/common/checkbox/Check";
+import { Check } from "../../checkbox/Check";
 import NoSearchResults from "./NoSearchResults";
-import ChevronIcon from "../../../components/common/icons/ChevronIcon";
+import ChevronIcon from "../../icons/ChevronIcon";
 import { BootstrapRow, ColMd4, SpacingContainer, TableWrapper } from "../../../components/common/Containers";
 import TanstackPagination from "./TanstackPagination";
-import CSVExportButtonNew from "../../../components/common/buttons/CSVExportButtonNew";
+import CSVExportButtonNew from "../../buttons/CSVExportButtonNew";
 import { useTranslation } from "react-i18next";
-import { H3SemiBold, H4SemiBold, TextBodyMdRegular } from "../../typography";
+import { H3SemiBold, H4SemiBold, TextBodyMdRegular } from "../../text/Typography";
 import { PrimaryButtonSmall, PrimaryOutlineButtonSmall } from "../../buttons/Buttons";
 import { Option } from "../../combobox/ComboBox";
 

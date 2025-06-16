@@ -1,11 +1,11 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { App, mockApps } from "./Models/App";
-import { CenterContentContainer } from "../common/Containers/BootstrapContainers";
-import { ButtonIcon, DefaultIcon } from "../common/icons/Icons";
+import { CenterContentContainer } from "../../packages/Containers/BootstrapContainers";
+import { ButtonIcon, DefaultIcon } from "../../packages/icons/Icons";
 import { CSVColumn, HeaderButton, TanstackDropdownProps, TanstackTable } from "../../packages/tables/tanstacktable/TanstackTable";
-import PopOverModal from "../modal/PopOverModal";
+import PopOverModal from "../../packages/modal/PopOverModal";
 import { ContentWrapper, PageWrapper } from "../common/Containers";
-import { TextBodyMdRegular } from "../../packages/typography";
+import { TextBodyMdRegular } from "../../packages/text/Typography";
 import { PrimaryButtonSmall } from "../../packages/buttons/Buttons";
 
 const TanstackTableDemoPage: React.FC = () => {
